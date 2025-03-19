@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure File Sender</title>
+    <style>
+        body {
+            display: flex;
+            height: 100vh;
+            justify-content: center;
+            align-items: center;
+            background-color: #f0f2f5;
+            font-family: Arial, sans-serif;
+        }
+        .container {
+            background: #ffffff;
+            padding: 2rem 3rem;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            max-width: 400px;
+            text-align: center;
+        }
+        h1 {
+            color: #4CAF50;
+            margin-bottom: 1rem;
+        }
+        label {
+            display: block;
+            margin: 10px 0 5px;
+            text-align: left;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 2px solid #ddd;
+            border-radius: 6px;
+            outline: none;
+        }
+        input:focus, textarea:focus {
+            border-color: #4CAF50;
+        }
+        .btn {
+            background-color: #4CAF50;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            border-radius: 6px;
+            cursor: pointer;
+            width: 100%;
+            margin-top: 15px;
+            transition: background 0.3s ease;
+        }
+        .btn:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Secure File Uploader</h1>
+        <form action="/" method="post" enctype="multipart/form-data">
+            <label for="file">Select File:</label>
+            <input type="file" name="file" required><br>
+
+            <label for="receiver_email">Receiver Email:</label>
+            <input type="email" name="receiver_email" required><br>
+
+            <label for="subject">Email Subject:</label>
+            <input type="text" name="subject" required><br>
+
+            <label for="description">Description:</label>
+            <textarea name="description" rows="4" required></textarea><br>
+
+            <input type="submit" value="Send Email" class="btn">
+        </form>
+    </div>
+</body>
+</html>
